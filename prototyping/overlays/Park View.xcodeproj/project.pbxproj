@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07866AB3165EE2B400D7BB3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07866AB2165EE2B400D7BB3A /* UIKit.framework */; };
+		07866AB5165EE2B400D7BB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07866AB4165EE2B400D7BB3A /* Foundation.framework */; };
+		07866AB7165EE2B400D7BB3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07866AB6165EE2B400D7BB3A /* CoreGraphics.framework */; };
+		07866ABD165EE2B400D7BB3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07866ABB165EE2B400D7BB3A /* InfoPlist.strings */; };
+		07866AC5165EE2B400D7BB3A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07866AC4165EE2B400D7BB3A /* Default.png */; };
+		07866AC7165EE2B400D7BB3A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07866AC6165EE2B400D7BB3A /* Default@2x.png */; };
+		07866AC9165EE2B400D7BB3A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07866AC8165EE2B400D7BB3A /* Default-568h@2x.png */; };
+		07866ACC165EE2B400D7BB3A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07866ACA165EE2B400D7BB3A /* MainStoryboard_iPhone.storyboard */; };
+		07866ACF165EE2B400D7BB3A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07866ACD165EE2B400D7BB3A /* MainStoryboard_iPad.storyboard */; };
+		07A2E1DF167988AA00355A96 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A2E1DE167988AA00355A96 /* CoreLocation.framework */; };
+		525A5EFC19F5F45500DEF932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A5EFB19F5F45500DEF932 /* AppDelegate.swift */; };
+		5278E25E1A02D4CB00F267B6 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E25D1A02D4CB00F267B6 /* Park.swift */; };
+		5278E2601A02D4F000F267B6 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E25F1A02D4F000F267B6 /* Character.swift */; };
+		5278E2641A02D53000F267B6 /* ParkMapOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E2631A02D53000F267B6 /* ParkMapOverlayView.swift */; };
+		5278E2661A02D54100F267B6 /* ParkMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E2651A02D54100F267B6 /* ParkMapOverlay.swift */; };
+		5278E2681A02D55C00F267B6 /* AttractionAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E2671A02D55C00F267B6 /* AttractionAnnotation.swift */; };
+		5278E26A1A02D57800F267B6 /* AttractionAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E2691A02D57800F267B6 /* AttractionAnnotationView.swift */; };
+		5278E26C1A02D5A000F267B6 /* ParkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E26B1A02D5A000F267B6 /* ParkMapViewController.swift */; };
+		5278E2701A02D5E200F267B6 /* MapOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278E26F1A02D5E200F267B6 /* MapOptionsViewController.swift */; };
+		D3CE500D195317350032F059 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CE500C195317350032F059 /* MapKit.framework */; };
+		D3D60AE01953211900BED91B /* overlay_park.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60ADE1953211900BED91B /* overlay_park.png */; };
+		D3D60AE11953211900BED91B /* overlay_park@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60ADF1953211900BED91B /* overlay_park@2x.png */; };
+		D3D60AEB1953281800BED91B /* MagicMountain.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AE91953281800BED91B /* MagicMountain.plist */; };
+		D3D60AEC1953281800BED91B /* MagicMountainAttractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AEA1953281800BED91B /* MagicMountainAttractions.plist */; };
+		D3D60AF51953285C00BED91B /* firstaid.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AED1953285C00BED91B /* firstaid.png */; };
+		D3D60AF61953285C00BED91B /* firstaid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AEE1953285C00BED91B /* firstaid@2x.png */; };
+		D3D60AF71953285C00BED91B /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AEF1953285C00BED91B /* food.png */; };
+		D3D60AF81953285C00BED91B /* food@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AF01953285C00BED91B /* food@2x.png */; };
+		D3D60AF91953285C00BED91B /* ride.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AF11953285C00BED91B /* ride.png */; };
+		D3D60AFA1953285C00BED91B /* ride@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AF21953285C00BED91B /* ride@2x.png */; };
+		D3D60AFB1953285C00BED91B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AF31953285C00BED91B /* star.png */; };
+		D3D60AFC1953285C00BED91B /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D60AF41953285C00BED91B /* star@2x.png */; };
+		D3D60B0119532B0B00BED91B /* EntranceToGoliathRoute.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D60B0019532B0B00BED91B /* EntranceToGoliathRoute.plist */; };
+		D3D60B0519532D7500BED91B /* BatmanLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D60B0219532D7500BED91B /* BatmanLocations.plist */; };
+		D3D60B0619532D7500BED91B /* TazLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D60B0319532D7500BED91B /* TazLocations.plist */; };
+		D3D60B0719532D7500BED91B /* TweetyBirdLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3D60B0419532D7500BED91B /* TweetyBirdLocations.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07866AAE165EE2B400D7BB3A /* Park View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Park View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07866AB2165EE2B400D7BB3A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07866AB4165EE2B400D7BB3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07866AB6165EE2B400D7BB3A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07866ABA165EE2B400D7BB3A /* Park View-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Park View-Info.plist"; sourceTree = "<group>"; };
+		07866ABC165EE2B400D7BB3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07866AC0165EE2B400D7BB3A /* Park View-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Park View-Prefix.pch"; sourceTree = "<group>"; };
+		07866AC4165EE2B400D7BB3A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		07866AC6165EE2B400D7BB3A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		07866AC8165EE2B400D7BB3A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		07866ACB165EE2B400D7BB3A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		07866ACE165EE2B400D7BB3A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		07A2E1DE167988AA00355A96 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		525A5EF419F5DE0F00DEF932 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
+		525A5EFB19F5F45500DEF932 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5278E25D1A02D4CB00F267B6 /* Park.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
+		5278E25F1A02D4F000F267B6 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		5278E2631A02D53000F267B6 /* ParkMapOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkMapOverlayView.swift; sourceTree = "<group>"; };
+		5278E2651A02D54100F267B6 /* ParkMapOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkMapOverlay.swift; sourceTree = "<group>"; };
+		5278E2671A02D55C00F267B6 /* AttractionAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionAnnotation.swift; sourceTree = "<group>"; };
+		5278E2691A02D57800F267B6 /* AttractionAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionAnnotationView.swift; sourceTree = "<group>"; };
+		5278E26B1A02D5A000F267B6 /* ParkMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkMapViewController.swift; sourceTree = "<group>"; };
+		5278E26F1A02D5E200F267B6 /* MapOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOptionsViewController.swift; sourceTree = "<group>"; };
+		D3CE500C195317350032F059 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D3D60ADE1953211900BED91B /* overlay_park.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_park.png; sourceTree = "<group>"; };
+		D3D60ADF1953211900BED91B /* overlay_park@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay_park@2x.png"; sourceTree = "<group>"; };
+		D3D60AE91953281800BED91B /* MagicMountain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MagicMountain.plist; sourceTree = "<group>"; };
+		D3D60AEA1953281800BED91B /* MagicMountainAttractions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MagicMountainAttractions.plist; sourceTree = "<group>"; };
+		D3D60AED1953285C00BED91B /* firstaid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstaid.png; sourceTree = "<group>"; };
+		D3D60AEE1953285C00BED91B /* firstaid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firstaid@2x.png"; sourceTree = "<group>"; };
+		D3D60AEF1953285C00BED91B /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		D3D60AF01953285C00BED91B /* food@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food@2x.png"; sourceTree = "<group>"; };
+		D3D60AF11953285C00BED91B /* ride.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ride.png; sourceTree = "<group>"; };
+		D3D60AF21953285C00BED91B /* ride@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ride@2x.png"; sourceTree = "<group>"; };
+		D3D60AF31953285C00BED91B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		D3D60AF41953285C00BED91B /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		D3D60B0019532B0B00BED91B /* EntranceToGoliathRoute.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EntranceToGoliathRoute.plist; sourceTree = "<group>"; };
+		D3D60B0219532D7500BED91B /* BatmanLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BatmanLocations.plist; sourceTree = "<group>"; };
+		D3D60B0319532D7500BED91B /* TazLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TazLocations.plist; sourceTree = "<group>"; };
+		D3D60B0419532D7500BED91B /* TweetyBirdLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TweetyBirdLocations.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07866AAB165EE2B400D7BB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3CE500D195317350032F059 /* MapKit.framework in Frameworks */,
+				07A2E1DF167988AA00355A96 /* CoreLocation.framework in Frameworks */,
+				07866AB3165EE2B400D7BB3A /* UIKit.framework in Frameworks */,
+				07866AB5165EE2B400D7BB3A /* Foundation.framework in Frameworks */,
+				07866AB7165EE2B400D7BB3A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		076BF08D1680457B00ACF08A /* Park Information */ = {
+			isa = PBXGroup;
+			children = (
+				D3D60B0219532D7500BED91B /* BatmanLocations.plist */,
+				D3D60B0319532D7500BED91B /* TazLocations.plist */,
+				D3D60B0419532D7500BED91B /* TweetyBirdLocations.plist */,
+				D3D60B0019532B0B00BED91B /* EntranceToGoliathRoute.plist */,
+				D3D60AE91953281800BED91B /* MagicMountain.plist */,
+				D3D60AEA1953281800BED91B /* MagicMountainAttractions.plist */,
+			);
+			name = "Park Information";
+			sourceTree = "<group>";
+		};
+		076BF08F1680459100ACF08A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D3D60AED1953285C00BED91B /* firstaid.png */,
+				D3D60AEE1953285C00BED91B /* firstaid@2x.png */,
+				D3D60AEF1953285C00BED91B /* food.png */,
+				D3D60AF01953285C00BED91B /* food@2x.png */,
+				D3D60AF11953285C00BED91B /* ride.png */,
+				D3D60AF21953285C00BED91B /* ride@2x.png */,
+				D3D60AF31953285C00BED91B /* star.png */,
+				D3D60AF41953285C00BED91B /* star@2x.png */,
+				D3D60ADE1953211900BED91B /* overlay_park.png */,
+				D3D60ADF1953211900BED91B /* overlay_park@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		076BF0901680459E00ACF08A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5278E25D1A02D4CB00F267B6 /* Park.swift */,
+				5278E25F1A02D4F000F267B6 /* Character.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		076BF091168045BF00ACF08A /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				5278E2671A02D55C00F267B6 /* AttractionAnnotation.swift */,
+				5278E2691A02D57800F267B6 /* AttractionAnnotationView.swift */,
+			);
+			name = Annotations;
+			sourceTree = "<group>";
+		};
+		076BF092168045C900ACF08A /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				5278E2631A02D53000F267B6 /* ParkMapOverlayView.swift */,
+				5278E2651A02D54100F267B6 /* ParkMapOverlay.swift */,
+			);
+			name = Overlays;
+			sourceTree = "<group>";
+		};
+		076BF093168045DE00ACF08A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				07866ACA165EE2B400D7BB3A /* MainStoryboard_iPhone.storyboard */,
+				07866ACD165EE2B400D7BB3A /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		07866AA3165EE2B400D7BB3A = {
+			isa = PBXGroup;
+			children = (
+				07866AB8165EE2B400D7BB3A /* Park View */,
+				07866AB1165EE2B400D7BB3A /* Frameworks */,
+				07866AAF165EE2B400D7BB3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07866AAF165EE2B400D7BB3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07866AAE165EE2B400D7BB3A /* Park View.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07866AB1165EE2B400D7BB3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE500C195317350032F059 /* MapKit.framework */,
+				07A2E1DE167988AA00355A96 /* CoreLocation.framework */,
+				07866AB2165EE2B400D7BB3A /* UIKit.framework */,
+				07866AB4165EE2B400D7BB3A /* Foundation.framework */,
+				07866AB6165EE2B400D7BB3A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07866AB8165EE2B400D7BB3A /* Park View */ = {
+			isa = PBXGroup;
+			children = (
+				076BF08F1680459100ACF08A /* Images */,
+				076BF08D1680457B00ACF08A /* Park Information */,
+				076BF0901680459E00ACF08A /* Models */,
+				076BF092168045C900ACF08A /* Overlays */,
+				076BF091168045BF00ACF08A /* Annotations */,
+				076BF093168045DE00ACF08A /* Storyboards */,
+				5278E26B1A02D5A000F267B6 /* ParkMapViewController.swift */,
+				5278E26F1A02D5E200F267B6 /* MapOptionsViewController.swift */,
+				07866AB9165EE2B400D7BB3A /* Supporting Files */,
+				525A5EF419F5DE0F00DEF932 /* Playground.playground */,
+				525A5EFB19F5F45500DEF932 /* AppDelegate.swift */,
+			);
+			path = "Park View";
+			sourceTree = "<group>";
+		};
+		07866AB9165EE2B400D7BB3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07866ABA165EE2B400D7BB3A /* Park View-Info.plist */,
+				07866ABB165EE2B400D7BB3A /* InfoPlist.strings */,
+				07866AC0165EE2B400D7BB3A /* Park View-Prefix.pch */,
+				07866AC4165EE2B400D7BB3A /* Default.png */,
+				07866AC6165EE2B400D7BB3A /* Default@2x.png */,
+				07866AC8165EE2B400D7BB3A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07866AAD165EE2B400D7BB3A /* Park View */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07866AEA165EE2B400D7BB3A /* Build configuration list for PBXNativeTarget "Park View" */;
+			buildPhases = (
+				07866AAA165EE2B400D7BB3A /* Sources */,
+				07866AAB165EE2B400D7BB3A /* Frameworks */,
+				07866AAC165EE2B400D7BB3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Park View";
+			productName = "Park View";
+			productReference = 07866AAE165EE2B400D7BB3A /* Park View.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07866AA5165EE2B400D7BB3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Chris Wagner";
+			};
+			buildConfigurationList = 07866AA8165EE2B400D7BB3A /* Build configuration list for PBXProject "Park View" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 07866AA3165EE2B400D7BB3A;
+			productRefGroup = 07866AAF165EE2B400D7BB3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07866AAD165EE2B400D7BB3A /* Park View */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07866AAC165EE2B400D7BB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07866ABD165EE2B400D7BB3A /* InfoPlist.strings in Resources */,
+				07866AC5165EE2B400D7BB3A /* Default.png in Resources */,
+				D3D60B0519532D7500BED91B /* BatmanLocations.plist in Resources */,
+				D3D60AF61953285C00BED91B /* firstaid@2x.png in Resources */,
+				D3D60B0719532D7500BED91B /* TweetyBirdLocations.plist in Resources */,
+				07866AC7165EE2B400D7BB3A /* Default@2x.png in Resources */,
+				07866AC9165EE2B400D7BB3A /* Default-568h@2x.png in Resources */,
+				D3D60AEC1953281800BED91B /* MagicMountainAttractions.plist in Resources */,
+				D3D60AFC1953285C00BED91B /* star@2x.png in Resources */,
+				07866ACC165EE2B400D7BB3A /* MainStoryboard_iPhone.storyboard in Resources */,
+				07866ACF165EE2B400D7BB3A /* MainStoryboard_iPad.storyboard in Resources */,
+				D3D60AF81953285C00BED91B /* food@2x.png in Resources */,
+				D3D60B0119532B0B00BED91B /* EntranceToGoliathRoute.plist in Resources */,
+				D3D60B0619532D7500BED91B /* TazLocations.plist in Resources */,
+				D3D60AFB1953285C00BED91B /* star.png in Resources */,
+				D3D60AE01953211900BED91B /* overlay_park.png in Resources */,
+				D3D60AE11953211900BED91B /* overlay_park@2x.png in Resources */,
+				D3D60AF91953285C00BED91B /* ride.png in Resources */,
+				D3D60AFA1953285C00BED91B /* ride@2x.png in Resources */,
+				D3D60AF51953285C00BED91B /* firstaid.png in Resources */,
+				D3D60AF71953285C00BED91B /* food.png in Resources */,
+				D3D60AEB1953281800BED91B /* MagicMountain.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07866AAA165EE2B400D7BB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5278E2641A02D53000F267B6 /* ParkMapOverlayView.swift in Sources */,
+				5278E2661A02D54100F267B6 /* ParkMapOverlay.swift in Sources */,
+				5278E2681A02D55C00F267B6 /* AttractionAnnotation.swift in Sources */,
+				5278E26A1A02D57800F267B6 /* AttractionAnnotationView.swift in Sources */,
+				5278E26C1A02D5A000F267B6 /* ParkMapViewController.swift in Sources */,
+				5278E25E1A02D4CB00F267B6 /* Park.swift in Sources */,
+				5278E2601A02D4F000F267B6 /* Character.swift in Sources */,
+				5278E2701A02D5E200F267B6 /* MapOptionsViewController.swift in Sources */,
+				525A5EFC19F5F45500DEF932 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07866ABB165EE2B400D7BB3A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07866ABC165EE2B400D7BB3A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07866ACA165EE2B400D7BB3A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07866ACB165EE2B400D7BB3A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		07866ACD165EE2B400D7BB3A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07866ACE165EE2B400D7BB3A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07866AE8165EE2B400D7BB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07866AE9165EE2B400D7BB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07866AEB165EE2B400D7BB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Park View/Park View-Prefix.pch";
+				INFOPLIST_FILE = "Park View/Park View-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07866AEC165EE2B400D7BB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Park View/Park View-Prefix.pch";
+				INFOPLIST_FILE = "Park View/Park View-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07866AA8165EE2B400D7BB3A /* Build configuration list for PBXProject "Park View" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07866AE8165EE2B400D7BB3A /* Debug */,
+				07866AE9165EE2B400D7BB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07866AEA165EE2B400D7BB3A /* Build configuration list for PBXNativeTarget "Park View" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07866AEB165EE2B400D7BB3A /* Debug */,
+				07866AEC165EE2B400D7BB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07866AA5165EE2B400D7BB3A /* Project object */;
+}
