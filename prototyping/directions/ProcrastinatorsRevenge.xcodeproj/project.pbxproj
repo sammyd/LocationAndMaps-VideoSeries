@@ -12,9 +12,6 @@
 		0453071D1B4460370033613E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453071C1B4460370033613E /* AppDelegate.swift */; };
 		0453071F1B4460370033613E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453071E1B4460370033613E /* ViewController.swift */; };
 		045307271B4460370033613E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045307251B4460370033613E /* LaunchScreen.xib */; };
-		0453073D1B4460880033613E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0453073C1B4460880033613E /* MapKit.framework */; };
-		045307411B4460970033613E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045307401B4460970033613E /* UIKit.framework */; };
-		045307431B44609F0033613E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045307421B44609F0033613E /* CoreLocation.framework */; };
 		045307451B4461340033613E /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045307441B4461340033613E /* DirectionsViewController.swift */; };
 		045307491B446C040033613E /* AddressTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045307481B446C040033613E /* AddressTableView.swift */; };
 		046EAFCF1B48557500D431FF /* DirectionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAFCE1B48557500D431FF /* DirectionsTableView.swift */; };
@@ -28,9 +25,6 @@
 		0453071C1B4460370033613E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0453071E1B4460370033613E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		045307261B4460370033613E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0453073C1B4460880033613E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		045307401B4460970033613E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		045307421B44609F0033613E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		045307441B4461340033613E /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		045307481B446C040033613E /* AddressTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableView.swift; sourceTree = "<group>"; };
 		046EAFCE1B48557500D431FF /* DirectionsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsTableView.swift; sourceTree = "<group>"; };
@@ -41,9 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				045307431B44609F0033613E /* CoreLocation.framework in Frameworks */,
-				045307411B4460970033613E /* UIKit.framework in Frameworks */,
-				0453073D1B4460880033613E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +44,6 @@
 		0453070E1B4460370033613E = {
 			isa = PBXGroup;
 			children = (
-				045307421B44609F0033613E /* CoreLocation.framework */,
-				045307401B4460970033613E /* UIKit.framework */,
-				0453073C1B4460880033613E /* MapKit.framework */,
 				045307191B4460370033613E /* ProcrastinatorsRevenge */,
 				045307181B4460370033613E /* Products */,
 			);
