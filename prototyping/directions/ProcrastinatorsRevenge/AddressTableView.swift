@@ -42,7 +42,7 @@ class AddressTableView: UITableView {
 }
 
 extension AddressTableView: UITableViewDelegate {
-
+  
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 50
   }
@@ -62,7 +62,7 @@ extension AddressTableView: UITableViewDelegate {
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+    
     if addresses.count > indexPath.row {
       currentTextField.text = addresses[indexPath.row]
       let mapItem = MKMapItem(placemark:

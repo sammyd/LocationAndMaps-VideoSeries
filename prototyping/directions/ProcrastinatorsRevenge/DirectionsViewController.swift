@@ -39,7 +39,7 @@ class DirectionsViewController: UIViewController {
     addActivityIndicator()
     calculateSegmentDirections(0, time: 0, routes: [])
   }
-
+  
   func addActivityIndicator() {
     activityIndicator = UIActivityIndicatorView(frame: UIScreen.mainScreen().bounds)
     activityIndicator?.activityIndicatorViewStyle = .WhiteLarge
@@ -62,41 +62,41 @@ class DirectionsViewController: UIViewController {
   
   func calculateSegmentDirections(index: Int,
     var time: NSTimeInterval, var routes: [MKRoute]) {
-
-    let request: MKDirectionsRequest = MKDirectionsRequest()
-    request.source = locationArray[index].mapItem
-    request.destination = locationArray[index+1].mapItem
-    request.requestsAlternateRoutes = true
-    request.transportType = .Automobile
-
-    let directions = MKDirections(request: request)
-    directions.calculateDirectionsWithCompletionHandler ({
-      (response: MKDirectionsResponse?, error: NSError?) in
-      if let routeResponse = response?.routes {
-        let quickestRouteForSegment: MKRoute =
-        routeResponse.sort({$0.expectedTravelTime <
-          $1.expectedTravelTime})[0]
-        routes.append(quickestRouteForSegment)
-        time += quickestRouteForSegment.expectedTravelTime
-        
-        if index+2 < self.locationArray.count {
-          self.calculateSegmentDirections(index+1, time: time, routes: routes)
-        } else {
-          self.showRoute(routes, time: time)
-          self.hideActivityIndicator()
+      
+      let request: MKDirectionsRequest = MKDirectionsRequest()
+      request.source = locationArray[index].mapItem
+      request.destination = locationArray[index+1].mapItem
+      request.requestsAlternateRoutes = true
+      request.transportType = .Automobile
+      
+      let directions = MKDirections(request: request)
+      directions.calculateDirectionsWithCompletionHandler ({
+        (response: MKDirectionsResponse?, error: NSError?) in
+        if let routeResponse = response?.routes {
+          let quickestRouteForSegment: MKRoute =
+          routeResponse.sort({$0.expectedTravelTime <
+            $1.expectedTravelTime})[0]
+          routes.append(quickestRouteForSegment)
+          time += quickestRouteForSegment.expectedTravelTime
+          
+          if index+2 < self.locationArray.count {
+            self.calculateSegmentDirections(index+1, time: time, routes: routes)
+          } else {
+            self.showRoute(routes, time: time)
+            self.hideActivityIndicator()
+          }
+        } else if let _ = error {
+          let alert = UIAlertController(title: nil,
+            message: "Directions not available.", preferredStyle: .Alert)
+          let okButton = UIAlertAction(title: "OK",
+            style: .Cancel) { (alert) -> Void in
+              self.navigationController?.popViewControllerAnimated(true)
+          }
+          alert.addAction(okButton)
+          self.presentViewController(alert, animated: true,
+            completion: nil)
         }
-      } else if let _ = error {
-        let alert = UIAlertController(title: nil,
-          message: "Directions not available.", preferredStyle: .Alert)
-        let okButton = UIAlertAction(title: "OK",
-          style: .Cancel) { (alert) -> Void in
-            self.navigationController?.popViewControllerAnimated(true)
-        }
-        alert.addAction(okButton)
-        self.presentViewController(alert, animated: true,
-          completion: nil)
-      }
-    })
+      })
   }
   
   func showRoute(routes: [MKRoute], time: NSTimeInterval) {

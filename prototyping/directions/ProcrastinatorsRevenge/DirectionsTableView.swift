@@ -62,7 +62,7 @@ extension DirectionsTableView: UITableViewDelegate {
   }
   
   func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-
+    
     let label = UILabel()
     label.font = UIFont(name: "HoeflerText-Regular", size: 14)
     label.numberOfLines = 8
@@ -106,7 +106,7 @@ extension DirectionsTableView:UITableViewDataSource {
     cell.userInteractionEnabled = false
     
     let steps = directionsArray[indexPath.section].route.steps
-    let step = steps[indexPath.row] 
+    let step = steps[indexPath.row]
     let instructions = step.instructions
     let distance = step.distance.miles()
     cell.textLabel?.text = "\(indexPath.row+1). \(instructions) - \(distance) miles"

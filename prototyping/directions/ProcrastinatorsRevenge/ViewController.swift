@@ -51,10 +51,10 @@ class ViewController: UIViewController {
     
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
-
+    
     if CLLocationManager.locationServicesEnabled() {
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        locationManager.requestLocation()
+      locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+      locationManager.requestLocation()
     }
   }
   
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     let directionsViewController = segue.destinationViewController as! DirectionsViewController
     directionsViewController.locationArray = locationsArray
   }
-
+  
   @IBAction func addressEntered(sender: UIButton) {
     view.endEditing(true)
     let currentTextField = locationTuples[sender.tag-1].textField
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
   func formatAddressFromPlacemark(placemark: CLPlacemark) -> String {
     return (placemark.addressDictionary!["FormattedAddressLines"] as! [String]).joinWithSeparator(", ")
   }
-
+  
   @IBAction func swapFields(sender: AnyObject) {
     swap(&destinationField1.text, &destinationField2.text)
     swap(&locationTuples[1].mapItem, &locationTuples[2].mapItem)
@@ -172,7 +172,7 @@ extension ViewController: UITextFieldDelegate {
   func textFieldDidBeginEditing(textField: UITextField) {
     moveViewUp()
   }
-
+  
   func textFieldDidEndEditing(textField: UITextField) {
     moveViewDown()
   }
@@ -185,22 +185,22 @@ extension ViewController: UITextFieldDelegate {
 }
 
 extension ViewController: CLLocationManagerDelegate {
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        CLGeocoder().reverseGeocodeLocation(locations.last!,
-            completionHandler: {(placemarks:[CLPlacemark]?, error:NSError?) -> Void in
-                if let placemarks = placemarks {
-                    let placemark = placemarks[0]
-                    self.locationTuples[0].mapItem = MKMapItem(placemark:
-                        MKPlacemark(coordinate: placemark.location!.coordinate,
-                            addressDictionary: placemark.addressDictionary as! [String:AnyObject]?))
-                    self.sourceField.text = self.formatAddressFromPlacemark(placemark)
-                    self.enterButtonArray.filter{$0.tag == 1}.first!.selected = true
-                }
-        })
-    }
-    
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print(error)
-    }
+  
+  func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    CLGeocoder().reverseGeocodeLocation(locations.last!,
+      completionHandler: {(placemarks:[CLPlacemark]?, error:NSError?) -> Void in
+        if let placemarks = placemarks {
+          let placemark = placemarks[0]
+          self.locationTuples[0].mapItem = MKMapItem(placemark:
+            MKPlacemark(coordinate: placemark.location!.coordinate,
+              addressDictionary: placemark.addressDictionary as! [String:AnyObject]?))
+          self.sourceField.text = self.formatAddressFromPlacemark(placemark)
+          self.enterButtonArray.filter{$0.tag == 1}.first!.selected = true
+        }
+    })
+  }
+  
+  func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    print(error)
+  }
 }
